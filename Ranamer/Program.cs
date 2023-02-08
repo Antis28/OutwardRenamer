@@ -7,6 +7,7 @@ namespace Ranamer
 {
     internal class Program
     {
+        static int fileCount = 0;
 
         public static void Main(string[] args)
         {
@@ -18,6 +19,9 @@ namespace Ranamer
             {
                 Console.WriteLine(e.Message);
             }
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Files processed - " + fileCount);
+            Console.ResetColor();
             Console.ReadLine();
         }
 
@@ -33,6 +37,11 @@ namespace Ranamer
 
         private static void ScanDirs(string currentPath)
         {
+            Console.WriteLine(new String('-', 80));
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Directory <{currentPath}> processing..");
+            Console.ResetColor();
+
             var dirs = Directory.GetDirectories(currentPath);
             if (dirs.Length > 0)
             {
@@ -42,18 +51,21 @@ namespace Ranamer
                 }
             }
             RenameAllExts(currentPath);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"Directory <{currentPath}> completed!");
+            Console.ResetColor();
+            Console.WriteLine(new String('*', 80));
         }
 
         private static void RenameAllExts(string currentPath)
         {
-            Console.WriteLine(new String('-',80));
-            Console.WriteLine($"Directory {currentPath} processing..");
+            fileCount++;
             remEnvc(currentPath);
             remCharc(currentPath);
             remLegacyc(currentPath);
             remMapc(currentPath);
             remWorldc(currentPath);
-            Console.WriteLine(new String('*', 80));
+            
         }
 
         private static void remEnvc(string destinationPath)
@@ -109,7 +121,7 @@ namespace Ranamer
 
                 if (!File.Exists(old))
                 {
-                    Console.WriteLine($"File {newNameExt} successfully renamed.");
+                    Console.WriteLine($"File <{newNameExt}> successfully renamed.");
                 }
 
             }
