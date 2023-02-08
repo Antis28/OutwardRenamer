@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=xaDO0S3uZZU
 https://www.youtube.com/watch?v=HVE5-IlUM8Q
 
 For use:
-1) go to the SaveGames directory;
+1) go to the SaveGames directory (for example "C:\Program Files (x86)\Steam\steamapps\common\Outward\Outward_Defed\SaveGames\");
 2) copy Ranamer.exe there;
 3) run Ranamer.exe;
 4) enjoy the result.
