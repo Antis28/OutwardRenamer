@@ -8,6 +8,11 @@ https://www.reddit.com/r/outwardgame/comments/rlisdf/save_data_from_outward_regu
 https://www.youtube.com/watch?v=xaDO0S3uZZU
 https://www.youtube.com/watch?v=HVE5-IlUM8Q
 
+For use:
+1) go to the SaveGames directory;
+2) copy Ranamer.exe there;
+3) run Ranamer.exe;
+4) enjoy the result.
 
 Download utility:
 https://github.com/Antis28/OutwardRenamer/releases/download/v0.0.1/Ranamer.exe
